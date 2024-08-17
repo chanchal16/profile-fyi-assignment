@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IconShoppingCart, IconChevronDown } from "@tabler/icons-react";
 
 export const Navbar = () => {
@@ -6,7 +7,9 @@ export const Navbar = () => {
     <nav className="bg-blue-500">
       <div className="app-container flex items-center md:justify-between py-4 px-6 text-lg">
         <div className="flex gap-6 w-3/4">
-          <h4 className="text-xl text-white hover:text-yellow-300">ShopEase</h4>
+          <Link to="/" className="text-xl text-white hover:text-yellow-300">
+            ShopEase
+          </Link>
           <input type="search" className="w-1/3" />
         </div>
 
@@ -18,14 +21,16 @@ export const Navbar = () => {
                 More <IconChevronDown stroke={2} />
               </span>
             </li>
-            <li>
-              <span
-                className="text-white link flex items-center"
-                aria-label="Add post"
-              >
-                <IconShoppingCart stroke={2} />
-              </span>
-            </li>
+            <Link to="/cart">
+              <li>
+                <span
+                  className="text-white link flex items-center"
+                  aria-label="shopping cart"
+                >
+                  <IconShoppingCart stroke={2} />
+                </span>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
