@@ -12,7 +12,7 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="product-list container-mid mt-8 mb-8 grid gap-5 place-items-center place-self-center sm:grid-cols-3  md:grid-cols-4  md:mx-auto ">
+    <div className="mt-8 mb-8 grid gap-5 place-items-center place-self-center max-[480px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:mx-auto lg:max-w-screen-xl xl:grid-cols-5 ">
       {products.length > 0 ? (
         products?.map((product) => (
           <ProductCard key={product.id} product={product} />

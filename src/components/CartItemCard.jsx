@@ -26,7 +26,7 @@ export const CartItemCard = ({ product }) => {
         <strong className="font-medium">{product.title}</strong>
         <div className="flex grid-gap-4 pt-4">
           {checkExistanceInArray(cart, product.id) ? (
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between text-xl">
               <button
                 onClick={() => dispatch(DECREASE_QTY(product))}
                 disabled={product.quantity < 2}
@@ -46,12 +46,12 @@ export const CartItemCard = ({ product }) => {
           ) : null}
         </div>
 
-        <div className="flex justify-between">
-          <span>₹ {product.price * product.quantity}</span>
+        <div className="flex justify-between pt-2">
+          <span>$ {product.price * product.quantity}</span>
           <div>
             <button
-              onClick={() => dispatch(REMOVE_FROM_CART(product.id))}
-              className="p-1 border border-gray-4 rounded ml-2"
+              onClick={() => dispatch(REMOVE_FROM_CART(product))}
+              className="p-1 border border-gray-4 rounded mr-2 hover:text-gray-500"
             >
               Remove
             </button>

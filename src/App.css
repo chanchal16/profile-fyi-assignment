@@ -1,1 +1,22 @@
+.badge-icon {
+  position: relative;
+  /* margin:2rem; */
+}
+.badge {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+}
 
+.numbadge {
+  width: 18px;
+  height: 18px;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  background-color: red;
+  font-weight: bold;
+  font-size: 12px;
+}

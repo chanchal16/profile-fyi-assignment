@@ -42,8 +42,19 @@ export const cartSlice = createSlice({
       );
     },
     REMOVE_FROM_CART: (state, action) => {
-      state.cart = state.cart.filter((item) => item.id !== action.payload);
-      state.totalItems = state.totalItems - 1;
+      const productId = action.payload.id;
+      const productToRemove = state.cart.find((item) => item.id === productId);
+
+      if (productToRemove) {
+        state.cart = state.cart.filter((item) => item.id !== productId);
+        state.totalItems -= productToRemove.quantity;
+        state.totalPrice -= productToRemove.price * productToRemove.quantity;
+        state.finalPrice = calculateFinalPrice(
+          state.totalPrice,
+          state.discount,
+          state.discountType
+        );
+      }
     },
     INCREASE_QTY: (state, action) => {
       state.cart = state.cart.map((item) => {

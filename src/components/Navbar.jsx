@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { IconShoppingCart, IconChevronDown } from "@tabler/icons-react";
 
 export const Navbar = () => {
+  const { cart, totalItems } = useSelector((state) => state.cartItems);
   return (
     <nav className="bg-blue-500">
       <div className="app-container flex items-center md:justify-between py-4 px-6 text-lg">
@@ -22,13 +24,18 @@ export const Navbar = () => {
               </span>
             </li>
             <Link to="/cart">
-              <li>
+              <li className="badge-icon">
                 <span
                   className="text-white link flex items-center"
                   aria-label="shopping cart"
                 >
                   <IconShoppingCart stroke={2} />
                 </span>
+                {cart.length > 0 ? (
+                  <div className="badge numbadge">
+                    <small>{totalItems}</small>
+                  </div>
+                ) : null}
               </li>
             </Link>
           </ul>

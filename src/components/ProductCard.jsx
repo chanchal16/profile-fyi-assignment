@@ -35,7 +35,7 @@ export const ProductCard = ({ product }) => {
 
       {ItemExists ? (
         <Link to="/cart">
-          <button className="text-sm py-1.5 px-1 border-[1.5px] border-amber-400 bg-amber-400  rounded text-white  hover:bg-amber-500 hover:text-white">
+          <button className="text-sm w-full py-1.5 px-1 border-[1.5px] border-amber-400 bg-amber-400  rounded text-white  hover:bg-amber-500 hover:text-white">
             Go to Cart
           </button>
         </Link>
