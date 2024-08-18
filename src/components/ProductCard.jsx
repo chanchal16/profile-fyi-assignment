@@ -22,7 +22,7 @@ export const ProductCard = ({ product }) => {
         className="w-28 h-36 my- mx-auto"
       />
       <h3 className="text-gray-5 font-medium mt-2.5 text-ellipsis">
-        {product?.title}
+        {product?.title.substring(0, 20) + "..."}
       </h3>
 
       <div className=" mb-2.5 flex justify-between items-center">

@@ -12,7 +12,7 @@ export const Cart = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="grid grid-cols-6 grid-gap-4 p-8">
+    <div className="grid grid-cols-1 sm:grid-cols-6 grid-gap-4 p-8">
       <div className="col-span-4 pt-4 ml-2">
         {/* cart */}
         <div className="p-2">
