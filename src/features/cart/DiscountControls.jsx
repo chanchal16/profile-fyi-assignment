@@ -14,13 +14,13 @@ const DiscountControls = () => {
   const applyFixedDiscount = () => {
     dispatch(RESET_DISCOUNT());
     dispatch(APPLY_FIXED_DISCOUNT(10)); // Apply $10 off
-    confetti({ angle: 120, origin: { x: 1 } });
+    confetti({ angle: 120, origin: { x: 1 }, spread: 70 });
   };
 
   const applyPercentageDiscount = () => {
     dispatch(RESET_DISCOUNT());
     dispatch(APPLY_PERCENTAGE_DISCOUNT(10)); // Apply 10% off
-    confetti({ angle: 120, origin: { x: 1 } });
+    confetti({ angle: 120, origin: { x: 1 }, spread: 70 });
   };
 
   return (

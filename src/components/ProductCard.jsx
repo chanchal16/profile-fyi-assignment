@@ -15,7 +15,7 @@ export const ProductCard = ({ product }) => {
     }
   };
   return (
-    <div className="bg-white w-56 flex flex-col rounded border border-gray-3 shadow-md-gray-1 mb-4 p-2">
+    <div className="bg-white w-56 flex flex-col rounded border border-gray-3 shadow-md-gray-1 mb-4 p-2 product-card">
       <img
         src={product?.image}
         alt="product"
