@@ -1,8 +1,33 @@
-# React + Vite
+# ShopEase
+A mini app for product listing and cart management.
+- Used [fakestoreapi](https://fakestoreapi.com/docs) to fetch products
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- GETTING STARTED -->
+## Getting Started
 
-Currently, two official plugins are available:
+This project uses [Vite](https://vitejs.dev/) as a build tool.
+To get a local copy up and running follow these simple steps.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+
+Vite requires Node.js version >=18.0.0.
+* npm
+  ```sh
+  npm install npm@latest -g
+
+### Instructions
+To run the project locally, follow these steps:
+
+1. Clone the repo
+   ```
+   git clone https://github.com/chanchal16/profile-fyi-assignment.git
+   ```
+   
+2. Install NPM packages
+   ```
+   npm install
+   ```
+   
+ 3. Start dev server
+    ```
+    npm run dev
